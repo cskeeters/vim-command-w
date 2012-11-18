@@ -16,15 +16,10 @@ endfunction
 function! s:CommandW()
   let l:bufcount = len(filter(range(1, bufnr('$')), 'buflisted(v:val) == 1'))
 
-  if l:bufcount == 1
-    qall
+  if exists('g:loaded_bufkill')
+    BD
   else
-    if exists('g:loaded_bufkill')
-      BD
-    else
-      call s:BufkillError()
-      q
-    endif
+    call s:BufkillError()
   endif
 endfunction
 
