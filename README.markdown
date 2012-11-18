@@ -33,9 +33,10 @@ If you have [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332) ins
     git clone git://github.com/nathanaelkane/vim-command-w.git
 
 ### Vundle (my preferred method)
-If you have [Vundle](https://github.com/gmarik/vundle) installed, simply add the following to your `.vimrc`:
+If you have [Vundle](https://github.com/gmarik/vundle) installed, simply add the following to your `.vimrc.bundles.local`:
 
-    Bundle 'git://github.com/nathanaelkane/vim-command-w.git'
+    Bundle 'bufkill.vim'
+    Bundle 'nathanaelkane/vim-command-w.git'
 
 Then use the `:BundleInstall` command to install the plugin.
 
@@ -44,9 +45,11 @@ Then use the `:BundleInstall` command to install the plugin.
 ### MacVim
 Add the following to your `.gvimrc`:
 
-    macmenu &File.Close key=<nop>
-    nmap <D-w> :CommandW<CR>
-    imap <D-w> <Esc>:CommandW<CR>
+    if has("gui_macvim")
+        macmenu &File.Close key=<nop>
+        nmap <D-w> :CommandW<CR>
+        imap <D-w> <Esc>:CommandW<CR>
+    endif
 
 Now you can press ⌘W to close buffers (or to close Vim if you've only got one buffer open).
 
