@@ -30,13 +30,13 @@ Simply copy the `plugin` directory into your `.vim` directory.
 If you have [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332) installed, just clone this repo into a subdirectory of your `.vim/bundle` directory like so:
 
     cd ~/.vim/bundle
-    git clone git://github.com/nathanaelkane/vim-command-w.git
+    git clone git://github.com/cskeeters/vim-command-w.git
 
 ### Vundle (my preferred method)
 If you have [Vundle](https://github.com/gmarik/vundle) installed, simply add the following to your `.vimrc.bundles.local`:
 
     Bundle 'bufkill.vim'
-    Bundle 'nathanaelkane/vim-command-w.git'
+    Bundle 'cskeeters/vim-command-w.git'
 
 Then use the `:BundleInstall` command to install the plugin.
 
